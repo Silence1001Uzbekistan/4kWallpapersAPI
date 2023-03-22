@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.a4kwallpapersapi.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_newFragment"
+            app:destination="@id/newFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_animalsFragment"
+            app:destination="@id/animalsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_natureFragment"
+            app:destination="@id/natureFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_technologyFragment"
+            app:destination="@id/technologyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_allFragment"
+            app:destination="@id/allFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.example.a4kwallpapersapi.NewFragment"
+        android:label="fragment_new"
+        tools:layout="@layout/fragment_new" />
+    <fragment
+        android:id="@+id/animalsFragment"
+        android:name="com.example.a4kwallpapersapi.AnimalsFragment"
+        android:label="fragment_animals"
+        tools:layout="@layout/fragment_animals" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.a4kwallpapersapi.TechnologyFragment"
+        android:label="fragment_technology"
+        tools:layout="@layout/fragment_technology" />
+    <fragment
+        android:id="@+id/natureFragment"
+        android:name="com.example.a4kwallpapersapi.NatureFragment"
+        android:label="fragment_nature"
+        tools:layout="@layout/fragment_nature" />
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.a4kwallpapersapi.AllFragment"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all" />
+</navigation>
