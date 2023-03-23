@@ -3,9 +3,7 @@ package com.example.a4kwallpapersapi.Adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.a4kwallpapersapi.AllFragment
-import com.example.a4kwallpapersapi.AnimalsFragment
-import com.example.a4kwallpapersapi.NewFragment
+import com.example.a4kwallpapersapi.*
 
 class BootcampPagerAdapter(var list: ArrayList<String>, fragmentManager: FragmentManager) :
     FragmentStatePagerAdapter(
@@ -30,6 +28,14 @@ class BootcampPagerAdapter(var list: ArrayList<String>, fragmentManager: Fragmen
 
             2 -> {
                 return AnimalsFragment()
+            }
+
+            3 -> {
+                return TechnologyFragment()
+            }
+
+            4 -> {
+                return NatureFragment()
             }
 
         }

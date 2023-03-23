@@ -3,5 +3,7 @@
     android:id="@+id/imageRv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:src="#03A9F4"
+    android:src="@color/black"
+    android:backgroundTint="@color/black"
+    android:scaleType="fitXY"
     />

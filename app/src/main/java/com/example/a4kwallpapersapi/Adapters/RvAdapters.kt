@@ -8,14 +8,14 @@ import com.example.a4kwallpapersapi.models.Urls
 import com.example.a4kwallpapersapi.modelsTwo.Movie
 import com.squareup.picasso.Picasso
 
-class RvAdapters(var list: ArrayList<Movie>, var onMyItemClickListener: OnMyItemClickListener) :
+class RvAdapters(var list: ArrayList<Urls>, var onMyItemClickListener: OnMyItemClickListener) :
     RecyclerView.Adapter<RvAdapters.Vh>() {
 
     inner class Vh(var itemRvBinding: ItemRvBinding) : RecyclerView.ViewHolder(itemRvBinding.root) {
 
-        fun onBind(urls: Movie, position: Int) {
+        fun onBind(urls: Urls, position: Int) {
 
-            Picasso.get().load(urls.imageurl).into(itemRvBinding.imageRv)
+            Picasso.get().load(urls.small).into(itemRvBinding.imageRv)
 
             itemRvBinding.root.setOnClickListener {
 
@@ -47,7 +47,7 @@ class RvAdapters(var list: ArrayList<Movie>, var onMyItemClickListener: OnMyItem
 
     interface OnMyItemClickListener {
 
-        fun onItemClick(urls: Movie, position: Int)
+        fun onItemClick(urls: Urls, position: Int)
 
     }
 
