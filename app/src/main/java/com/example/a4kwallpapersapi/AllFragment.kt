@@ -53,7 +53,7 @@ class AllFragment : Fragment() {
 
         retrofitService = Common.retrofitService
 
-        retrofitService.getMovie("marvel", "3UqKaNY2_mKrqfLjpG2YKkKEwtFfT9m1wn90Qo1LuhU")
+        retrofitService.getMovie("travel", "PHP2e0dRV5BWShWG6ML_nKv8CigifWTD_4WlXXZCNIg")
             .enqueue(object : Callback<List<WallpapersItem>> {
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onResponse(

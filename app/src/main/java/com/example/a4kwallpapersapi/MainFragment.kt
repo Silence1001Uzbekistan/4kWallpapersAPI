@@ -58,6 +58,8 @@ class MainFragment : Fragment() {
         list.add("All")
         list.add("NEW")
         list.add("ANIMALS")
+        list.add("TECHNOLOGY")
+        list.add("NATURE")
 
 
         bootcampPagerAdapter = BootcampPagerAdapter(list, childFragmentManager)
