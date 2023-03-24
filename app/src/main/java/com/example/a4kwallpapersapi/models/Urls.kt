@@ -7,4 +7,4 @@ data class Urls(
     val small: String,
     val small_s3: String,
     val thumb: String
-)
+):java.io.Serializable

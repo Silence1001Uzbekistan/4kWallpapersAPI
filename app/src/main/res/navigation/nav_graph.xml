@@ -30,25 +30,50 @@
         android:id="@+id/newFragment"
         android:name="com.example.a4kwallpapersapi.NewFragment"
         android:label="fragment_new"
-        tools:layout="@layout/fragment_new" />
+        tools:layout="@layout/fragment_new" >
+        <action
+            android:id="@+id/action_newFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/animalsFragment"
         android:name="com.example.a4kwallpapersapi.AnimalsFragment"
         android:label="fragment_animals"
-        tools:layout="@layout/fragment_animals" />
+        tools:layout="@layout/fragment_animals" >
+        <action
+            android:id="@+id/action_animalsFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/technologyFragment"
         android:name="com.example.a4kwallpapersapi.TechnologyFragment"
         android:label="fragment_technology"
-        tools:layout="@layout/fragment_technology" />
+        tools:layout="@layout/fragment_technology" >
+        <action
+            android:id="@+id/action_technologyFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/natureFragment"
         android:name="com.example.a4kwallpapersapi.NatureFragment"
         android:label="fragment_nature"
-        tools:layout="@layout/fragment_nature" />
+        tools:layout="@layout/fragment_nature" >
+        <action
+            android:id="@+id/action_natureFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/allFragment"
         android:name="com.example.a4kwallpapersapi.AllFragment"
         android:label="fragment_all"
-        tools:layout="@layout/fragment_all" />
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_allFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.a4kwallpapersapi.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
 </navigation>

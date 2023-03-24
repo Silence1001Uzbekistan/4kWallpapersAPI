@@ -6,4 +6,5 @@
     android:src="@color/black"
     android:backgroundTint="@color/black"
     android:scaleType="fitXY"
+    android:layout_margin="2dp"
     />

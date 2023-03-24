@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.a4kwallpapersapi.Adapters.RvAdapters
 import com.example.a4kwallpapersapi.Adapters.SpinnerAdapter
@@ -92,6 +93,12 @@ class AllFragment : Fragment() {
 
         rvAdapters = RvAdapters(basicList, object : RvAdapters.OnMyItemClickListener {
             override fun onItemClick(urls: Urls, position: Int) {
+
+                val bundle = Bundle()
+
+                bundle.putSerializable("artikov", urls.small)
+
+                findNavController().navigate(R.id.imageFragment,bundle)
 
 
             }
