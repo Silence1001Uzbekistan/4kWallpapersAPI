@@ -66,7 +66,7 @@ class MainFragment : Fragment() {
         binding.viewPager.adapter = bootcampPagerAdapter
         binding.tabLayout.setupWithViewPager(binding.viewPager)
 
-        binding.tabLayout.setTabTextColors(R.color.white, Color.WHITE)
+        //binding.tabLayout.setTabTextColors(R.color.white, Color.WHITE)
 
         bootcampPagerAdapter.notifyDataSetChanged()
 
