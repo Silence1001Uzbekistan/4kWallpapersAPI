@@ -1,5 +1,6 @@
 package com.example.a4kwallpapersapi.models
 
-data class Film(
+data class ColorOfWater(
+    val approved_on: String,
     val status: String
 )

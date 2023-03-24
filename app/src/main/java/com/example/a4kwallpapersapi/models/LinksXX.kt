@@ -1,6 +1,6 @@
 package com.example.a4kwallpapersapi.models
 
-data class LinksX(
+data class LinksXX(
     val followers: String,
     val following: String,
     val html: String,

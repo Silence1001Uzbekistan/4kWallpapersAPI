@@ -4,16 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a4kwallpapersapi.databinding.ItemRvBinding
-import com.example.a4kwallpapersapi.models.Urls
-import com.example.a4kwallpapersapi.modelsTwo.Movie
+import com.example.a4kwallpapersapi.models.UrlsX
 import com.squareup.picasso.Picasso
 
-class RvAdapters(var list: ArrayList<Urls>, var onMyItemClickListener: OnMyItemClickListener) :
+class RvAdapters(var list: ArrayList<UrlsX>, var onMyItemClickListener: OnMyItemClickListener) :
     RecyclerView.Adapter<RvAdapters.Vh>() {
 
     inner class Vh(var itemRvBinding: ItemRvBinding) : RecyclerView.ViewHolder(itemRvBinding.root) {
 
-        fun onBind(urls: Urls, position: Int) {
+        fun onBind(urls: UrlsX, position: Int) {
 
             Picasso.get().load(urls.small).into(itemRvBinding.imageRv)
 
@@ -47,7 +46,7 @@ class RvAdapters(var list: ArrayList<Urls>, var onMyItemClickListener: OnMyItemC
 
     interface OnMyItemClickListener {
 
-        fun onItemClick(urls: Urls, position: Int)
+        fun onItemClick(urls: UrlsX, position: Int)
 
     }
 

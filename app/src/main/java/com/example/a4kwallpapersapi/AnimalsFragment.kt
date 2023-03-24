@@ -11,32 +11,21 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.a4kwallpapersapi.Adapters.RvAdapters
 import com.example.a4kwallpapersapi.databinding.FragmentAnimalsBinding
-import com.example.a4kwallpapersapi.databinding.FragmentNewBinding
-import com.example.a4kwallpapersapi.models.Urls
-import com.example.a4kwallpapersapi.models.WallpapersItem
+import com.example.a4kwallpapersapi.models.UrlsX
+import com.example.a4kwallpapersapi.models.Wallpapers
 import com.example.introductionretrofit.retrofit.Common
 import com.example.introductionretrofit.retrofit.RetrofitService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AnimalsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AnimalsFragment : Fragment() {
 
     lateinit var binding: FragmentAnimalsBinding
 
 
     lateinit var rvAdapters: RvAdapters
-    lateinit var basicList: ArrayList<Urls>
+    lateinit var basicList: ArrayList<UrlsX>
 
     lateinit var retrofitService: RetrofitService
 
@@ -60,24 +49,24 @@ class AnimalsFragment : Fragment() {
         retrofitService = Common.retrofitService
 
         retrofitService.getMovie("animals", "PHP2e0dRV5BWShWG6ML_nKv8CigifWTD_4WlXXZCNIg")
-            .enqueue(object : Callback<List<WallpapersItem>> {
+            .enqueue(object : Callback<Wallpapers> {
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onResponse(
-                    call: Call<List<WallpapersItem>>,
-                    response: Response<List<WallpapersItem>>
+                    call: Call<Wallpapers>,
+                    response: Response<Wallpapers>
                 ) {
 
                     Log.d(TAG, "onResponse: {${response.isSuccessful}}")
 
                     if (response.isSuccessful && response.body() != null) {
 
-                        val list = response.body()
+                        val list = response.body()!!.results
                         list?.forEach {
 
                             Log.d(TAG, "OnDon:$it")
 
                         }
-                        for (wallpaper in response.body()!!) {
+                        for (wallpaper in response.body()!!.results) {
                             basicList.add(wallpaper.urls)
                         }
 
@@ -87,7 +76,7 @@ class AnimalsFragment : Fragment() {
 
                 }
 
-                override fun onFailure(call: Call<List<WallpapersItem>>, t: Throwable) {
+                override fun onFailure(call: Call<Wallpapers>, t: Throwable) {
 
 
                     Log.d(TAG, "onFailure: ${t.message}")
@@ -97,7 +86,7 @@ class AnimalsFragment : Fragment() {
             })
 
         rvAdapters = RvAdapters(basicList, object : RvAdapters.OnMyItemClickListener {
-            override fun onItemClick(urls: Urls, position: Int) {
+            override fun onItemClick(urls: UrlsX, position: Int) {
 
                 val bundle = Bundle()
 

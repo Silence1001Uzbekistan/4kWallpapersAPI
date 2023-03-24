@@ -1,15 +1,15 @@
 package com.example.a4kwallpapersapi.models
 
-data class Sponsor(
+data class UserX(
     val accepted_tos: Boolean,
     val bio: String,
     val first_name: String,
     val for_hire: Boolean,
     val id: String,
     val instagram_username: String,
-    val last_name: Any,
-    val links: LinksX,
-    val location: Any,
+    val last_name: String,
+    val links: LinksXX,
+    val location: String,
     val name: String,
     val portfolio_url: String,
     val profile_image: ProfileImage,

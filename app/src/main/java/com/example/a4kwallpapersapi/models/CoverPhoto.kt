@@ -1,6 +1,6 @@
 package com.example.a4kwallpapersapi.models
 
-data class WallpapersItem(
+data class CoverPhoto(
     val alt_description: String,
     val blur_hash: String,
     val color: String,
@@ -12,11 +12,12 @@ data class WallpapersItem(
     val liked_by_user: Boolean,
     val likes: Int,
     val links: Links,
+    val premium: Boolean,
     val promoted_at: String,
-    val sponsorship: Sponsorship,
+    val sponsorship: Any,
     val topic_submissions: TopicSubmissions,
     val updated_at: String,
-    val urls: Urls,
+    val urls: UrlsX,
     val user: User,
     val width: Int
 )
